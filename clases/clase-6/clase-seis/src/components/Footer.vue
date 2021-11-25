@@ -1,9 +1,7 @@
 <template lang="html">
-
   <section class="footer">
     <h1>footer Component</h1>
   </section>
-
 </template>
 
 <script lang="js">
@@ -26,12 +24,9 @@
 
     }
 }
-
-
 </script>
 
 <style scoped lang="scss">
-  .footer {
-
-  }
+.footer {
+}
 </style>
