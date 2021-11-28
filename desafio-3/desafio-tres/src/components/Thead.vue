@@ -1,7 +1,7 @@
 <template lang="html">
   <thead>
     <tr>
-      <Th v-for="(label, i) in labels" :key="label" :label="label"></Th>
+      <Th v-for="label in labels" :key="label" :label="label"></Th>
     </tr>
   </thead>
 </template>

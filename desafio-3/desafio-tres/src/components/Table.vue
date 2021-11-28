@@ -2,7 +2,7 @@
   <table class="table table-striped">
     <Thead :labels="labels"></Thead>
     <tbody>
-      <Tr v-for="(item, i) in items" :key="item.id" :item="item"></Tr>
+      <Tr v-for="item in items" :key="item.id" :item="item"></Tr>
     </tbody>
   </table>
 </template>
