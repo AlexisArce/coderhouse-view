@@ -1,10 +1,14 @@
 <template>
   <v-app>
-    <v-container>
-      <v-main>
-        <login />
-      </v-main>
-    </v-container>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col md="6" offset-md="3">
+            <login />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
