@@ -1,9 +1,7 @@
 import products from "../../data/products.json";
 
-console.log(products);
-
 export default {
-  name: "home",
+  name: "item-list",
   components: {},
   props: [],
   data: () => ({

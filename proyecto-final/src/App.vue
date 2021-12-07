@@ -1,19 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <home />
+      <item-list />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Home from "./components/home/index.vue";
+import ItemList from "./components/item-list/index.vue";
 
 export default {
   name: "App",
 
   components: {
-    Home,
+    ItemList,
   },
 
   data: () => ({
