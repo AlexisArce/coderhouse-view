@@ -44,6 +44,11 @@ export default {
 
     deleteItemConfirm() {
       this.users.splice(this.editedIndex, 1);
+      this.$swal(
+        "Usuario eliminado",
+        "El usuario fue eliminado correctamente",
+        "success"
+      );
       this.closeDelete();
     },
 
@@ -67,8 +72,18 @@ export default {
     save() {
       if (this.editedIndex > -1) {
         Object.assign(this.users[this.editedIndex], this.editedItem);
+        this.$swal(
+          "Usuario actualizado",
+          "El usuario fue actualizado correctamente",
+          "success"
+        );
       } else {
         this.users.push(this.editedItem);
+        this.$swal(
+          "Usuario creado",
+          "El usuario fue creado correctamente",
+          "success"
+        );
       }
       this.close();
     },
