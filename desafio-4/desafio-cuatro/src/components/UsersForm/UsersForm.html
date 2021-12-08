@@ -1,0 +1,53 @@
+<section class="users-form">
+  <v-form ref="form" v-model="valid" lazy-validation>
+    <v-row>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.name"
+          label="Nombre"
+          :rules="[rules.required, rules.counter]"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.lastname"
+          label="Apellido"
+          :rules="[rules.required, rules.counter]"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.position"
+          label="Posición"
+          :rules="[rules.required, rules.counter]"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.area"
+          label="Área"
+          :rules="[rules.required, rules.counter]"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.email"
+          label="Email"
+          :rules="[rules.required, rules.email]"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="4">
+        <v-text-field
+          v-model="editedItem.extension"
+          label="Extensión"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" sm="6" md="6">
+        <v-checkbox
+          v-model="editedItem.isAdmin"
+          label="¿Es administrador?"
+        ></v-checkbox>
+      </v-col>
+    </v-row>
+  </v-form>
+</section>
