@@ -70,6 +70,8 @@ export default {
     },
 
     save() {
+      if (!this.$refs.userForm.validate()) return;
+
       if (this.editedIndex > -1) {
         Object.assign(this.users[this.editedIndex], this.editedItem);
         this.$swal(
