@@ -34,6 +34,11 @@ const routes = [
     name: "Cart",
     component: () => import("../components/cart/index.vue"),
   },
+  {
+    path: "/item/:itemId",
+    name: "ItemDetails",
+    component: () => import("../components/item-details/index.vue"),
+  },
 ];
 
 const router = new VueRouter({
