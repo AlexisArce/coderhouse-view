@@ -1,8 +1,9 @@
 import axios from "axios";
+import Navbar from "../navbar.vue";
 
 export default {
   name: "item-list",
-  components: {},
+  components: { Navbar },
   props: [],
   data: () => ({
     products: [],
