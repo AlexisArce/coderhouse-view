@@ -1,0 +1,52 @@
+<section class="register">
+  <v-container fluid>
+    <v-row>
+      <v-col class="offset-md-3 col-md-6">
+        <v-form ref="form" @submit.prevent="submit">
+          <v-text-field
+            v-model="form.firstname"
+            :rules="rules.firstname"
+            color="purple darken-2"
+            label="Nombre"
+            required
+          ></v-text-field>
+
+          <v-text-field
+            v-model="form.lastname"
+            :rules="rules.lastname"
+            color="blue darken-2"
+            label="Apellido"
+            required
+          ></v-text-field>
+
+          <v-text-field
+            v-model="form.email"
+            :rules="rules.email"
+            label="E-mail"
+            required
+          ></v-text-field>
+
+          <v-text-field
+            v-model="form.password"
+            :rules="rules.password"
+            label="Contraseña"
+            required
+          ></v-text-field>
+
+          <v-row align="center" justify="space-around" class="my-8">
+            <v-btn text @click="resetForm" plain> Cancelar </v-btn>
+            <v-btn
+              :disabled="!formIsValid"
+              text
+              color="primary"
+              plain
+              type="submit"
+            >
+              Registrar
+            </v-btn>
+          </v-row>
+        </v-form>
+      </v-col>
+    </v-row>
+  </v-container>
+</section>

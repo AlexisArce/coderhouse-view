@@ -6,19 +6,19 @@
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+        <v-icon>mdi-cart</v-icon>
       </v-btn>
     </v-toolbar>
 
     <v-container fluid>
       <v-row dense>
         <v-col v-for="product in products" :key="product.id" :cols="flex">
-          <v-card>
+          <v-card class="pa-2" outlined>
             <v-img
-              :src="product.thumbnail"
+              :src="product.image"
               class="white--text align-end"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
+              height="300px"
             >
               <v-card-title v-text="product.title"></v-card-title>
             </v-img>

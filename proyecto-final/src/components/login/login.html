@@ -1,27 +1,33 @@
 <section class="login">
-  <v-form ref="form" v-model="valid" lazy-validation>
-    <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="E-mail"
-      required
-    ></v-text-field>
+  <v-container fluid>
+    <v-row>
+      <v-col class="offset-md-3 col-md-6">
+        <v-form ref="form" v-model="valid" lazy-validation>
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="E-mail"
+            required
+          ></v-text-field>
 
-    <v-text-field
-      v-model="password"
-      :rules="passwordRules"
-      label="Contraseña"
-      required
-    ></v-text-field>
+          <v-text-field
+            v-model="password"
+            :rules="passwordRules"
+            label="Contraseña"
+            required
+          ></v-text-field>
 
-    <v-btn
-      :disabled="!valid"
-      color="blue-grey"
-      class="my-10 white--text"
-      @click="validate"
-      block
-    >
-      Ingresar
-    </v-btn>
-  </v-form>
+          <v-btn
+            :disabled="!valid"
+            color="blue-grey"
+            class="my-10 white--text"
+            @click="validate"
+            block
+          >
+            Ingresar
+          </v-btn>
+        </v-form>
+      </v-col>
+    </v-row>
+  </v-container>
 </section>

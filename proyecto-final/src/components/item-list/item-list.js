@@ -1,15 +1,27 @@
-import products from "../../data/products.json";
+import axios from "axios";
 
 export default {
   name: "item-list",
   components: {},
   props: [],
   data: () => ({
-    products: products,
-    flex: 4,
+    products: [],
+    flex: 3,
+    loading: true,
   }),
 
-  computed: {},
-  mounted() {},
+  computed: {
+    hasItems: () => {
+      return this.products?.length > 0;
+    },
+  },
+  mounted() {
+    axios("https://fakestoreapi.com/products/category/electronics").then(
+      (res) => {
+        this.products = res.data;
+        this.loading = false;
+      }
+    );
+  },
   methods: {},
 };
