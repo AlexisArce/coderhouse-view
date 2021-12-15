@@ -15,7 +15,8 @@ export default {
 
   methods: {
     validate() {
-      this.$refs.form.validate();
+      const isValid = this.$refs.form.validate();
+      if (isValid) this.$router.push({ name: "Home" });
     },
     reset() {
       this.$refs.form.reset();

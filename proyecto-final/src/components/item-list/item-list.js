@@ -23,5 +23,9 @@ export default {
       this.loading = false;
     });
   },
-  methods: {},
+  methods: {
+    viewItemDetails: function (item) {
+      this.$router.push({ name: "ItemDetails", params: { id: item.id } });
+    },
+  },
 };

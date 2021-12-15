@@ -19,14 +19,9 @@
           <v-card-actions>
             <v-chip class="ma-2" large>$ {{product.price}} </v-chip>
             <v-spacer></v-spacer>
-            <v-btn icon>
-              <v-icon>mdi-heart</v-icon>
-            </v-btn>
+            <v-btn @click="viewItemDetails(product)"> Ver detalle </v-btn>
             <v-btn icon>
               <v-icon>mdi-cart</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon>mdi-share-variant</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>
