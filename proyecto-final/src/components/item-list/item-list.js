@@ -1,9 +1,10 @@
 import axios from "axios";
-import Navbar from "../navbar.vue";
+import Navbar from "../Navbar.vue";
+import Spinner from "../Spinner.vue";
 
 export default {
   name: "item-list",
-  components: { Navbar },
+  components: { Navbar, Spinner },
   props: [],
   data: () => ({
     products: [],
@@ -17,12 +18,10 @@ export default {
     },
   },
   mounted() {
-    axios("https://fakestoreapi.com/products/category/electronics").then(
-      (res) => {
-        this.products = res.data;
-        this.loading = false;
-      }
-    );
+    axios("https://fakestoreapi.com/products").then((res) => {
+      this.products = res.data;
+      this.loading = false;
+    });
   },
   methods: {},
 };

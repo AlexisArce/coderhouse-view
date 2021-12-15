@@ -1,5 +1,5 @@
 import axios from "axios";
-import Navbar from "../navbar.vue";
+import Navbar from "../Navbar.vue";
 
 export default {
   name: "item-details",
