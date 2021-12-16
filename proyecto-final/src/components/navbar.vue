@@ -2,7 +2,7 @@
   <v-toolbar color="indigo" dark>
     <v-toolbar-title>e-commerce</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn icon>
+    <v-btn icon @click="viewCart">
       <v-icon>mdi-cart</v-icon>
     </v-btn>
   </v-toolbar>
@@ -22,10 +22,11 @@
       }
     },
     methods: {
-
+      viewCart(){
+        this.$router.push({ name: "Cart"});
+      }
     },
     computed: {
-
     }
 }
 </script>

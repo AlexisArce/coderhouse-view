@@ -8,7 +8,6 @@ export default {
   props: [],
   data: () => ({
     products: [],
-    flex: 3,
     loading: true,
   }),
 

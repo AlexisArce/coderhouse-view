@@ -5,7 +5,7 @@
       <v-col v-if="loading" class="text-center">
         <Spinner message="Cargando  los productos..." />
       </v-col>
-      <v-col v-for="product in products" :key="product.id" :cols="flex">
+      <v-col v-for="product in products" :key="product.id" class="col-md-3">
         <v-card class="pa-2" outlined>
           <v-img
             :src="product.image"
