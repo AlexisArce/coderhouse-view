@@ -1,4 +1,3 @@
-import data from "../../data.json";
 import UsersForm from "../UsersForm/index.vue";
 
 export default {
@@ -9,8 +8,6 @@ export default {
     return {
       search: "",
       headers: getHeaders(),
-      users: [],
-      isLoading: true,
       dialog: false,
       dialogDelete: false,
       editedIndex: -1,
@@ -19,15 +16,14 @@ export default {
     };
   },
 
-  created() {
+  created() {},
+  mounted() {
     this.initialize();
   },
-  mounted() {},
 
   methods: {
     initialize() {
-      this.users = data;
-      this.isLoading = false;
+      this.$store.dispatch("fetchUsers");
     },
 
     editItem(item) {
@@ -102,6 +98,12 @@ export default {
   computed: {
     formTitle() {
       return this.editedIndex === -1 ? "Nuevo usuario" : "Editar usuario";
+    },
+    isLoading() {
+      return this.$store.state.loadingUsers;
+    },
+    users() {
+      return this.$store.state.users;
     },
   },
 
