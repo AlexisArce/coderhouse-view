@@ -5,14 +5,14 @@
         <v-text-field
           v-model="editedItem.name"
           label="Nombre"
-          :rules="[rules.required, rules.counter]"
+          :rules="[rules.required, rules.counter, rules.onlyLetters]"
         ></v-text-field>
       </v-col>
       <v-col cols="12" sm="6" md="4">
         <v-text-field
           v-model="editedItem.lastname"
           label="Apellido"
-          :rules="[rules.required, rules.counter]"
+          :rules="[rules.required, rules.counter, rules.onlyLetters]"
         ></v-text-field>
       </v-col>
       <v-col cols="12" sm="6" md="4">
